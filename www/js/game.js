@@ -139,14 +139,14 @@
      * Центрирование окон
      */
     $(window).resize(function() {
-		$('.window').each(function (i) {
-			$(this).css({
-				position:'absolute',
-				left: Math.max(0, ($(window).width() - $(this).outerWidth()) / 2),
-				top: Math.max(0, ($(window).height() - $(this).outerHeight()) / 2)
-			});
-		});
-	});
+        $('.window').each(function (i) {
+            $(this).css({
+                position:'absolute',
+                left: Math.max(0, ($(window).width() - $(this).outerWidth()) / 2),
+                top: Math.max(0, ($(window).height() - $(this).outerHeight()) / 2)
+            });
+        });
+    });
     /**
      * Инициализация игры "Пьяница"
      */
