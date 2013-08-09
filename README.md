@@ -1,3 +1,4 @@
 # Пьяница
 Карточная игра
-Демо http://drunkard.boolive.ru
+
+Демо http://www.drunkard.boolive.ru
