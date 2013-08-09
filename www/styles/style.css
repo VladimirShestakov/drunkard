@@ -1,0 +1,136 @@
+@charset "utf-8";
+body{
+    background-color: #666;
+    padding: 0;
+    margin: 0;
+    font-family: Arial,serif;
+	color: #444;
+}
+.layout-help{
+    position: absolute;
+    padding: 10px;
+    width: 30%;
+    line-height: 1.45;
+    }
+
+.layout-game{
+    position: fixed;
+    width: 400px;
+    height: 100%;
+    left: 30%;
+    }
+    .layout-game .zone{
+        /*height: 200px;*/
+        text-align: center;
+        vertical-align: middle;
+        position: absolute;
+    }
+    .layout-game .zone.player1{
+        z-index: 102;
+        top: 0;
+    }
+    .layout-game .zone.game{
+        z-index: 100;
+        top: 150px;
+        bottom: 150px;
+    }
+    .layout-game .zone.player2{
+        z-index: 101;
+        bottom: 0;
+    }
+.deck{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    height: 150px;
+    /*width: 200px;*/
+    position: relative;
+    vertical-align: middle;
+    text-align: left;
+    margin-left: 99px;
+    }
+    .deck .card{
+        width: 100px;
+        height: 140px;
+        border: 1px solid #C0C0C0;
+        background: #FFF;
+        border-radius: 10px;
+        font-size: 20pt;
+        position: relative;
+        display: inline-block;
+        margin-left: -99px;
+        transition: top ease-in 0.1s;
+        -webkit-transition: top ease-in 0.1s;
+        vertical-align: middle;
+        text-align: center;
+        }
+        .deck .card .value{
+            line-height: 140px;
+            font-size: 32pt;
+            }
+        .deck .card:first-child{
+            /*margin-left: 0px;*/
+            }
+        .deck .card:before{
+            display: block;
+            position: absolute;
+            text-align: center;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 35px;
+        }
+        .deck .card:after{
+            display: block;
+            position: absolute;
+            text-align: center;
+            right: 0;
+            bottom: 0;
+            width: 30px;
+            height: 35px;
+            transform:rotate(180deg);
+            -webkit-transform:rotate(180deg);
+            -ms-transform:rotate(180deg);
+        }
+
+        .deck .card.spades:before,
+        .deck .card.spades:after{
+            content: '♠';
+        }
+        .deck .card.clubs:before,
+        .deck .card.clubs:after{
+            content: '♣';
+        }
+        .deck .card.diams,
+        .deck .card.hearts{
+            color: #FF0000;
+        }
+        .deck .card.diams:before,
+        .deck .card.diams:after{
+            content: '♦';
+        }
+        .deck .card.hearts:before,
+        .deck .card.hearts:after{
+            content: '♥';
+        }
+    .player2 .deck .card:last-child{
+        cursor: pointer;
+        }
+        .player2 .deck .card:last-child:hover{
+            top: -5px;
+        }
+    .deck .card.close{
+        background: #FFF url(img/bg.png) repeat;
+        border: 1px solid #EEE;
+        box-shadow: inset 0 0 0px 3px #FFF;
+        }
+        .deck .card.close *,
+        .deck .card.close:after,
+        .deck .card.close:before{
+            display: none;
+        }
+        .deck .card.close:last-child{
+            box-shadow: inset 0 0 0px 2px #FFF,
+                    1px 1px 4px #555;
+        }
